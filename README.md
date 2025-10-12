@@ -17,7 +17,15 @@ Foram escolhidos quatro exercícios da plataforma online e dividido entre a dupl
 
 
 ## Screenshots
--inserir prints
+-[135. Candy (Difícil)](https://leetcode.com/problems/candy/)
+![135](assets/135.png)
+![](assets/135submitted.png)
+[Código](code/135.py)
+
+-[179. Largest Number (Médio)](https://leetcode.com/problems/largest-number/)
+![179](assets/179.png)
+![](assets/179submitted.png)
+[Código](code/179.py)
 
 ## Instalação 
 **Linguagem**: Python e C++<br> 

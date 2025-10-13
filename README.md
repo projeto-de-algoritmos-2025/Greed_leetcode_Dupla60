@@ -27,6 +27,17 @@ Foram escolhidos quatro exercícios da plataforma online e dividido entre a dupl
 ![](assets/179submitted.png)
 [Código](code/179.py)
 
+-[630. Course Schedule iii (Difícil)](https://leetcode.com/problems/course-schedule-iii/)
+![630](assets/LeetCode_630_Description.png)
+![](assets/LeetCode_630_Submit.png)
+[Código](code/630.cpp)
+
+-[435. Non Overlapping Intervals (Médio)](https://leetcode.com/problems/non-overlapping-intervals/)
+![435](assets/LeetCode_435_Description.png)
+![](assets/LeetCode_435_Submit.png)
+[Código](code/435.cpp)
+
+
 ## Instalação 
 **Linguagem**: Python e C++<br> 
 

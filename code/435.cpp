@@ -13,7 +13,7 @@ public:
         //     cout << "[" << x[0] << " - " << x[1] << "]\n";
         // }
         int ans = 0;
-        int end = 0, start = 0;
+        int end = -50001;
 
         for(int i = 0; i < intervals.size(); i++){
             if(intervals[i][0] >= end){

@@ -3,7 +3,12 @@
     posso fazer aquele curso
 
     1° - Ordeno de forma crescente pelo Deadline
-    2° - Verifico se o "tempoAtual" + "duration" <= "lasDay"
+    2° - Verifico se o "tempoAtual" + "duration" <= "lastDay"
+_______________________________________________________________________________________
+    Pós "WA"
+    Preciso de alguma forma para levar em consideração a duração também, e não somente o deadline
+
+    talvés eu possa colocar todos os cursos na solução (em ordem de deadline) e ir removendo os de duração mais alta
 */
 class Solution {
 public:
@@ -12,10 +17,21 @@ public:
         sort(courses.begin(), courses.end(), [](const vector<int>& a, const vector<int>& b){
             return a[1] < b[1];
         });
+
+        priority_queue<int> pq;
+
         for(int i = 0; i < courses.size(); i++){
             if(now + courses[i][0] <= courses[i][1]){
                 now += courses[i][0];
                 ans++;
+                pq.push(courses[i][0]);
+            }
+            else{   // preciso remover o de duração max?
+                if(pq.top() > courses[i][0]){
+                    int t = pq.top();
+                    pq.pop();
+                    now = now + courses[i][0] - t; 
+                }
             }
         }
         return ans;

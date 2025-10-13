@@ -7,7 +7,6 @@
 _______________________________________________________________________________________
     Pós "WA"
     Preciso de alguma forma para levar em consideração a duração também, e não somente o deadline
-
 */
 class Solution {
 public:
@@ -25,11 +24,12 @@ public:
                 ans++;
                 pq.push(courses[i][0]);
             }
-            else{   // preciso remover o de duração max?
-                if(!pq.empty() && pq.top() > courses[i][0]){
-                    int t = pq.top();
+            else{   
+                if(!pq.empty() && pq.top() > courses[i][0]){    // Se existe uma opção que não 
+                    int t = pq.top();                           // caberia mas tem tempo menor
                     pq.pop();
                     now = now + courses[i][0] - t; 
+                    pq.push(courses[i][0]);
                 }
             }
         }

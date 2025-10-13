@@ -8,7 +8,6 @@ ________________________________________________________________________________
     Pós "WA"
     Preciso de alguma forma para levar em consideração a duração também, e não somente o deadline
 
-    talvés eu possa colocar todos os cursos na solução (em ordem de deadline) e ir removendo os de duração mais alta
 */
 class Solution {
 public:
@@ -27,7 +26,7 @@ public:
                 pq.push(courses[i][0]);
             }
             else{   // preciso remover o de duração max?
-                if(pq.top() > courses[i][0]){
+                if(!pq.empty() && pq.top() > courses[i][0]){
                     int t = pq.top();
                     pq.pop();
                     now = now + courses[i][0] - t; 

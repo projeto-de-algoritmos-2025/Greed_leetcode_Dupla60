@@ -29,7 +29,7 @@ Foram escolhidos quatro exercícios da plataforma online e dividido entre a dupl
 
 -[630. Course Schedule iii (Difícil)](https://leetcode.com/problems/course-schedule-iii/)
 ![630](assets/LeetCode_630_Description.png)
-![](assets/LeetCode_630_Submit.png)
+![](assets/LeetCode_630_Submit2.png)
 [Código](code/630.cpp)
 
 -[435. Non Overlapping Intervals (Médio)](https://leetcode.com/problems/non-overlapping-intervals/)

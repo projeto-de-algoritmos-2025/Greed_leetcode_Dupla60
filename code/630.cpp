@@ -13,23 +13,23 @@ public:
     int scheduleCourse(vector<vector<int>>& courses) {
         int ans = 0, now = 0;
         sort(courses.begin(), courses.end(), [](const vector<int>& a, const vector<int>& b){
-            return a[1] < b[1];
-        });
+            return a[1] < b[1];     // Ordena de forma crescente em courses[i][1]
+        });                         // (Crescente por Deadline)
 
-        priority_queue<int> pq;
+        priority_queue<int> pq;     // Cria um MaxHeap 
 
-        for(int i = 0; i < courses.size(); i++){
-            if(now + courses[i][0] <= courses[i][1]){
-                now += courses[i][0];
-                ans++;
-                pq.push(courses[i][0]);
+        for(int i = 0; i < courses.size(); i++){    // Para cada curso
+            if(now + courses[i][0] <= courses[i][1]){   // Se tenho tempo para fazer
+                now += courses[i][0];                   // Atualiza o tempo
+                ans++;                                  // Atualizo a resposta
+                pq.push(courses[i][0]);                 // Coloco o tempo do curso no MaxHeap
             }
-            else{   
-                if(!pq.empty() && pq.top() > courses[i][0]){    // Se existe uma opção que não 
-                    int t = pq.top();                           // caberia mas tem tempo menor
-                    pq.pop();
-                    now = now + courses[i][0] - t; 
-                    pq.push(courses[i][0]);
+            else{      // Se não tenho tempo para fazer o curso
+                if(!pq.empty() && pq.top() > courses[i][0]){    // Se existe uma opção que gasta 
+                    int t = pq.top();                           // menos tempo (comparando com o Heap)
+                    pq.pop();                                   // Removo a tarefa antiga do Heap
+                    now = now + courses[i][0] - t;  // Removo o tempo da tarefa antiga e add o novo
+                    pq.push(courses[i][0]);         // Adiciono a nova tarefa no Heap
                 }
             }
         }

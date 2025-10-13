@@ -7,19 +7,19 @@ class Solution {
 public:
     int eraseOverlapIntervals(vector<vector<int>>& intervals) {
         sort(intervals.begin(), intervals.end(), [](const vector<int>& a, const vector<int>& b) {
-            return a[1] < b[1];
+            return a[1] < b[1]; // Ordena em ordem crescente pelo intervals[i][1] (tempo de fim da tarefa)
         });
-        // for(auto x : intervals){
+        // for(auto x : intervals){                             // Estava usando para achar erros
         //     cout << "[" << x[0] << " - " << x[1] << "]\n";
         // }
         int ans = 0;
         int end = -50001;
 
         for(int i = 0; i < intervals.size(); i++){
-            if(intervals[i][0] >= end){
-                end = intervals[i][1];
+            if(intervals[i][0] >= end){ // Se é compatível
+                end = intervals[i][1];  // Atualiza o horario de termino da ultima tarefa
             }
-            else
+            else                        // Não compatível
                 ans++;
         }
 

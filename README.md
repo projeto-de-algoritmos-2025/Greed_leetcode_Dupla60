@@ -42,8 +42,7 @@ Foram escolhidos quatro exercícios da plataforma online e dividido entre a dupl
 **Linguagem**: Python e C++<br> 
 
 ## Video
--inserir video
-
+-[video](https://drive.google.com/file/d/1g6irtDBz67bmTzJTa1fwOiOHdjQR5VmL/view?usp=sharing)
 ## Outros 
-
+-[Slides](https://docs.google.com/presentation/d/117ItxV7vr12KYZPkZg75D5kYmh00QFAiv9xaZ27Kv-Q/edit?usp=sharing)
 
